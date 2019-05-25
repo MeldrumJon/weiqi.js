@@ -104,29 +104,29 @@ describe("Game", function() {
     });
   });
 
-  describe('#areaScore', function() {
-    var moves = [
-      ['black', [0, 1]],
-      ['white', [0, 2]],
-      ['black', [1, 0]],
-      ['white', [1, 2]],
-      ['black', [1, 1]],
-      ['white', [2, 0]],
-      ['black', null],
-      ['white', [2, 1]],
-    ];
-    var game = playMoves(Weiqi.createGame(4), moves);
-
-    it('returns the difference between black and white\'s scores', function() {
-      assert.equal(4 - 12, Weiqi.areaScore(game, 0));
-    });
-
-    it('defaults to komi of 0', function() {
-      assert.equal(4 - 12, Weiqi.areaScore(game));
-    });
-
-    it('adds komi to white\'s score', function() {
-      assert.equal(4 - (12 + 0.5), Weiqi.areaScore(game, 0.5));
-    });
-  });
+//   describe('#areaScore', function() {
+//     var moves = [
+//       ['black', [0, 1]],
+//       ['white', [0, 2]],
+//       ['black', [1, 0]],
+//       ['white', [1, 2]],
+//       ['black', [1, 1]],
+//       ['white', [2, 0]],
+//       ['black', null],
+//       ['white', [2, 1]],
+//     ];
+//     var game = playMoves(Weiqi.createGame(4), moves);
+// 
+//     it('returns the difference between black and white\'s scores', function() {
+//       assert.equal(4 - 12, Weiqi.areaScore(game, 0));
+//     });
+// 
+//     it('defaults to komi of 0', function() {
+//       assert.equal(4 - 12, Weiqi.areaScore(game));
+//     });
+// 
+//     it('adds komi to white\'s score', function() {
+//       assert.equal(4 - (12 + 0.5), Weiqi.areaScore(game, 0.5));
+//     });
+//   });
 });

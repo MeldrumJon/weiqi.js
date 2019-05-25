@@ -59,9 +59,9 @@ export function pass(game, player) {
   return play(game, player, null);
 }
 
-export function areaScore(game, komi = 0.0) {
+export function areaScore(game) {
   const boardScore = boardAreaScore(game.get('board'));
-  return boardScore.black - (boardScore.white + komi);
+  return boardScore;
 }
 
 export function toArray(game) {
