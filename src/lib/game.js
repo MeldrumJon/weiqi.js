@@ -1,6 +1,6 @@
 import Immutable from 'immutable';
 import { Move, Position } from './records';
-import { createBoard, placeStone, areaScore as boardAreaScore } from './board';
+import { createBoard, placeStone, areaScore as boardAreaScore, toArray as boardToArray } from './board';
 import { opponentColor } from './util';
 
 export function createGame(boardSize) {
@@ -62,4 +62,9 @@ export function pass(game, player) {
 export function areaScore(game, komi = 0.0) {
   const boardScore = boardAreaScore(game.get('board'));
   return boardScore.black - (boardScore.white + komi);
+}
+
+export function toArray(game) {
+  const str = boardToArray(game.get('board'));
+  return str;
 }

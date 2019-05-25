@@ -1,4 +1,4 @@
-import { createGame, isOver, play, pass, areaScore } from './lib/game';
+import { createGame, isOver, play, pass, areaScore, toArray } from './lib/game';
 
 export default {
   createGame,
@@ -6,4 +6,5 @@ export default {
   play,
   pass,
   areaScore,
+  toArray
 };
